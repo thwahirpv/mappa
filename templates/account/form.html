@@ -1,0 +1,201 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block css_link %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock %}
+
+{% block title %}
+Form
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Raise a Complaint</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Official Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Age</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input name="age" placeholder="age" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone </label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="+91" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+      
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="address" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="city" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+   
+<div class="form-group"> 
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option value="">Andhra Pradesh</option>
+      <option value="">Arunachal Pradesh</option>
+      <option value="">Assam</option>
+      <option value="">Bihar</option>
+      <option value="">Chhattisgarh</option>
+      <option value="">Goa</option>
+      <option value="">Gujarat</option>
+      <option value="">Haryana</option>
+      <option value=""> Himachal Pradesh</option>
+      <option value="">Jharkhand</option>
+      <option value="">Karnataka</option>
+      <option value="">Kerala</option>
+      <option value="">Madhya Pradesh</option>
+      <option value="">Maharashtra</option>
+      <option value="">Manipur</option>
+      <option value=""> Meghalaya</option>
+      <option value="">Mizoram</option>
+      <option value="">Nagaland</option>
+      <option value="">Odisha</option>
+      <option value="">Punjab</option>
+      <option value=""> Rajasthan</option>
+      <option value="">Sikkim</option>
+      <option value="">Tamil Nadu</option>
+      <option value="">Telangana</option>
+      <option value="">Tripura</option>
+      <option value="">Uttar Pradesh</option>
+      <option value="">Uttarakhand</option>
+      <option value="">West Bengal</option>
+     
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+    </div>
+</div>
+</div>
+
+
+<!-- type of complaint -->
+<div class="form-group"> 
+    <label class="col-md-4 control-label">Complaint Type</label>
+      <div class="col-md-4 selectContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <select name="state" class="form-control selectpicker" >
+        <option value=" " >Please select your option</option>
+        <option value="">Gender Based Violence</option>
+        <option value="">Discrimination</option>
+        <option value="">Sexual Harrasment</option>
+        <option value="">Reproductive Rights</option>
+        <option value="">Family Law Matters</option>
+        <option value="">Trafficking</option>
+        <option value="">Online Harrrasment</option>
+        <option value="">Privacy Violation</option>
+        <option value=""> Threats and Hate crimes</option>
+      
+      </select>
+    </div>
+  </div>
+  </div>
+
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">Case Description</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+            <textarea class="form-control" name="comment" placeholder="Submit in Letter Format"></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, Your complaint have been Registered.</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" >Submit <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+{% endblock %}
