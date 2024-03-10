@@ -18,7 +18,7 @@ def registration(request):
     phone_number_patter = '^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$'
     url = 'account:registration'
     if request.user.is_authenticated and request.user.is_active:
-        return redirect('account:home')
+        return redirect('account:user_home')
     
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -26,7 +26,7 @@ def registration(request):
         phone_number = request.POST.get('phone')
         password = request.POST.get('password')
         country_code = +91
-        phone_number = int(str(phone_number) + str(country_code))
+        phone_number = int(str(country_code)  + str(phone_number))
 
 
         if not any(letter.isalpha() for letter in username) or len(username) < 3:
@@ -56,7 +56,7 @@ def registration(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('account:home')
+                return redirect('account:user_home')
             else:
                 return redirect('account:login')
     return render()
@@ -69,10 +69,10 @@ def login(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        user = authenticate(request, usernaem=username, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('account:home') 
+            return redirect('account:user_home') 
         else:
             messages.error(request, 'email or password is incorrect!')  
             return redirect('account:login')      
@@ -83,7 +83,7 @@ def logout(request):
     if request.user.is_authenticated:
         logout(request)
         request.session.flush()         
-        return redirect('account:home')
+        return redirect('account:user_home')
     
 
 
