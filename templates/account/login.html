@@ -1,11 +1,36 @@
 {% extends "index.html" %}
 {% load static %}
 
-{% block title %}
+{% block css_link %}
+<!-- <link rel="stylesheet" href="{% static 'css/demo.css' %}"> -->
+{% endblock %}
 
+{% block title %}
+Login
 {% endblock %}
 
 
 {% block content %}
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form>
+    <h3>Login Here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="Email or Phone" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password">
+
+    <button>Log In</button>
+
+
+    <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="#!"
+        class="fw-bold text-body"><u>Signup here</u></a></p>
+ 
+</form>
+
 
 {% endblock %}
